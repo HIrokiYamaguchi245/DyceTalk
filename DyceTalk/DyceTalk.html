@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+ 
+  <title>DyceTalkMaker</title>
+</head>
+<body>
+  <header>サイコロトークメーカー</header>
+  
+  <ul>
+    <a>トピックス</a>
+    <li class="line1">
+        <input type="text" id="topix1" list="t_list"size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick1()" name="btn">
+    </li>
+    <li class="line2">
+        <input type="text" id="topix2" list="t_list"size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick2()">
+    </li>
+    <li class="line3">
+        <input type="text" id="topix3" list="t_list"size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick3()">
+    </li>
+    <li class="line4">
+        <input type="text" id="topix4" list="t_list"size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick4()">
+    </li>
+    <li class="line5">
+        <input type="text" id="topix5" list="t_list"size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick5()">
+    </li>
+    <li class="line6">
+        <input type="text" id="topix6" list="t_list" size="45">
+        
+          <datalist id="t_list">
+            <script type="text/javascript" src="js/TopicDataList.js"></script>
+          </datalist>
+        <input type="submit" value="ランダム" onClick="onButtonClick6()">
+    </li>
+  </ul>
+  <div>
+    <p name="DemeTopix"id="DemeTopix">　　　</p>
+  </div>
+  
+  <footer>
+    <input type="submit" value="スタート"  onclick="start()">
+  </footer>
+</body>
+</html>

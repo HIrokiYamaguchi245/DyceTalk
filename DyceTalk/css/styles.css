@@ -1,0 +1,87 @@
+body{
+  background-color: rgb(229, 239, 213);
+  
+}
+header{
+  height: 50px;
+  font-size: 30px;
+  background-color:orange;
+  text-align: center;
+  border-radius: 5px;
+}
+
+a{
+  text-align: center;
+  margin: 15px;
+  background-color: rgb(255, 128, 0);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+ul{
+  
+  width:auto;
+  height:auto;
+  
+}
+li{
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+.line1{
+  margin: 10px;
+  background-color:green;
+}
+.line2{
+  margin: 10px;
+  background-color:rgba(0, 128, 0, 0.807);
+}
+.line3{
+  margin: 10px;
+  background-color:rgba(0, 128, 0, 0.61);
+}
+.line4{
+  margin: 10px;
+  background-color:rgba(0, 128, 0, 0.379);
+}
+.line5{
+  margin: 10px;
+  background-color:rgba(0, 128, 0, 0.275);
+}
+.line6{
+  margin: 10px;
+  background-color:rgba(0, 128, 0, 0.144);
+}
+
+
+div{
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(255, 128, 0);
+  border-radius: 5px;
+}
+.deme{
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+footer{
+  text-align: center;
+  background-color: orange;
+  height: 50px;
+  font-size: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
