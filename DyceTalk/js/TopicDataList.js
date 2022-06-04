@@ -1,5 +1,5 @@
 //トピックデータリスト
-var datas = [
+const datas = [
   "わかってもらいづらい話",
   "ここだけの秘密",
   "猫被ってる話",
@@ -80,71 +80,36 @@ var datas = [
   "一番高い買い物",
 ];
 
-var selected = [];
+//指定された配列からランダムに選ぶための関数
+function random(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
 //トピック選択
-var word = datas[Math.floor( Math.random() * datas.length)];
-
-datas.forEach(function(value) {
-document.writeln("<option value=\"", value, "\">", value,
-"</option>");
-});
-
+window.onload = init;
+function init() {
+  let list = document.getElementById("t_list");
+  datas.forEach(value => {
+    dom = document.createElement("option");
+    dom.textContent = value;
+    dom.value = value;
+    list.appendChild(dom);
+  });
+}
 
 //トピックランダム
-function onButtonClick1(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix1").value = word;
-  selected[0] = word;
-}
-function onButtonClick2(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix2").value = word;
-  selected[1] = word;
-}
-function onButtonClick3(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix3").value = word;
-  selected[2] = word;
-}
-function onButtonClick4(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix4").value = word;
-  selected[3] = word;
-}
-function onButtonClick5(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix5").value = word;
-  selected[4] = word;
-}
-function onButtonClick6(){
-  var word = datas[Math.floor( Math.random() * datas.length)];
-  document.getElementById("topix6").value = word;
-  selected[5] = word
+function onButtonClick(i) {
+  document.getElementById("topix" + i).value = random(datas);
 }
 
 //ダイス生成と開始
-var i = 0
-function start(){
-   ;
-   selected[0] = document.getElementById("topix1").value;
-   selected[1] = document.getElementById("topix2").value;
-   selected[2] = document.getElementById("topix3").value;
-   selected[3] = document.getElementById("topix4").value;
-   selected[4] = document.getElementById("topix5").value;
-   selected[5] = document.getElementById("topix6").value;
-
-  
-  var DemeTopix = document.getElementById("DemeTopix");
-  if(!selected[0]||!selected[1]||!selected[2]||!selected[3]||!selected[4]||!selected[5]){
+let i = 0;
+function start() {
+  const selected = Array.from(document.querySelectorAll(".combo"));
+  let DemeTopix = document.getElementById("DemeTopix");
+  if (!selected.every(x => x.value)) {
     DemeTopix.innerHTML = ("＊すべて埋めてください");
-  }else{
-    var deme = selected[Math.floor(Math.random() * selected.length)];
-    i++
-    DemeTopix.innerHTML = (deme) + (" ")+i;
+    return;
   }
-  
- }
-
-
- 
+  DemeTopix.innerHTML = random(selected).value + " " + ++i;
+}
